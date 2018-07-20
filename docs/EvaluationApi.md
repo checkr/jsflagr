@@ -16,20 +16,21 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.EvaluationApi();
+var apiInstance = new Flagr.EvaluationApi();
 
-let body = new Flagr.EvalContext(); // EvalContext | evalution context
+var body = new Flagr.EvalContext(); // EvalContext | evalution context
 
 
-apiInstance.postEvaluation(body, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.postEvaluation(body, callback);
 ```
 
 ### Parameters
@@ -59,20 +60,21 @@ No authorization required
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.EvaluationApi();
+var apiInstance = new Flagr.EvaluationApi();
 
-let body = new Flagr.EvaluationBatchRequest(); // EvaluationBatchRequest | evalution batch request
+var body = new Flagr.EvaluationBatchRequest(); // EvaluationBatchRequest | evalution batch request
 
 
-apiInstance.postEvaluationBatch(body, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.postEvaluationBatch(body, callback);
 ```
 
 ### Parameters

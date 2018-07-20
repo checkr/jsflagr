@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entityID** | **String** |  | 
+**entityID** | **String** |  | [optional] 
 **entityType** | **String** |  | 
 **entityContext** | **Object** |  | [optional] 
 

@@ -18,22 +18,23 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.VariantApi();
+var apiInstance = new Flagr.VariantApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let body = new Flagr.CreateVariantRequest(); // CreateVariantRequest | create a variant
+var body = new Flagr.CreateVariantRequest(); // CreateVariantRequest | create a variant
 
 
-apiInstance.createVariant(flagID, body, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.createVariant(flagID, body, callback);
 ```
 
 ### Parameters
@@ -64,22 +65,23 @@ No authorization required
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.VariantApi();
+var apiInstance = new Flagr.VariantApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let variantID = 789; // Number | numeric ID of the variant
+var variantID = 789; // Number | numeric ID of the variant
 
 
-apiInstance.deleteVariant(flagID, variantID, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.deleteVariant(flagID, variantID, callback);
 ```
 
 ### Parameters
@@ -110,20 +112,21 @@ No authorization required
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.VariantApi();
+var apiInstance = new Flagr.VariantApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
 
-apiInstance.findVariants(flagID, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.findVariants(flagID, callback);
 ```
 
 ### Parameters
@@ -153,24 +156,25 @@ No authorization required
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.VariantApi();
+var apiInstance = new Flagr.VariantApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let variantID = 789; // Number | numeric ID of the variant
+var variantID = 789; // Number | numeric ID of the variant
 
-let body = new Flagr.PutVariantRequest(); // PutVariantRequest | update a variant
+var body = new Flagr.PutVariantRequest(); // PutVariantRequest | update a variant
 
 
-apiInstance.putVariant(flagID, variantID, body, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.putVariant(flagID, variantID, body, callback);
 ```
 
 ### Parameters

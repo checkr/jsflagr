@@ -16,22 +16,23 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.DistributionApi();
+var apiInstance = new Flagr.DistributionApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let segmentID = 789; // Number | numeric ID of the segment
+var segmentID = 789; // Number | numeric ID of the segment
 
 
-apiInstance.findDistributions(flagID, segmentID, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.findDistributions(flagID, segmentID, callback);
 ```
 
 ### Parameters
@@ -64,24 +65,25 @@ replace the distribution with the new setting
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.DistributionApi();
+var apiInstance = new Flagr.DistributionApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let segmentID = 789; // Number | numeric ID of the segment
+var segmentID = 789; // Number | numeric ID of the segment
 
-let body = new Flagr.PutDistributionsRequest(); // PutDistributionsRequest | array of distributions
+var body = new Flagr.PutDistributionsRequest(); // PutDistributionsRequest | array of distributions
 
 
-apiInstance.putDistributions(flagID, segmentID, body, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.putDistributions(flagID, segmentID, body, callback);
 ```
 
 ### Parameters
