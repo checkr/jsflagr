@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entityID** | **String** |  | 
+**entityID** | **String** | entityID is used to deterministically at random to evaluate the flag result. If it&#39;s empty, flagr will randomly generate one. | [optional] 
 **entityType** | **String** |  | 
 **entityContext** | **Object** |  | [optional] 
 **enableDebug** | **Boolean** |  | [optional] 

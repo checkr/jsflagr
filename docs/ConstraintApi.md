@@ -18,24 +18,25 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.ConstraintApi();
+var apiInstance = new Flagr.ConstraintApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let segmentID = 789; // Number | numeric ID of the segment
+var segmentID = 789; // Number | numeric ID of the segment
 
-let body = new Flagr.CreateConstraintRequest(); // CreateConstraintRequest | create a constraint
+var body = new Flagr.CreateConstraintRequest(); // CreateConstraintRequest | create a constraint
 
 
-apiInstance.createConstraint(flagID, segmentID, body, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.createConstraint(flagID, segmentID, body, callback);
 ```
 
 ### Parameters
@@ -67,24 +68,25 @@ No authorization required
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.ConstraintApi();
+var apiInstance = new Flagr.ConstraintApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let segmentID = 789; // Number | numeric ID of the segment
+var segmentID = 789; // Number | numeric ID of the segment
 
-let constraintID = 789; // Number | numeric ID of the constraint
+var constraintID = 789; // Number | numeric ID of the constraint
 
 
-apiInstance.deleteConstraint(flagID, segmentID, constraintID, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.deleteConstraint(flagID, segmentID, constraintID, callback);
 ```
 
 ### Parameters
@@ -116,22 +118,23 @@ No authorization required
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.ConstraintApi();
+var apiInstance = new Flagr.ConstraintApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let segmentID = 789; // Number | numeric ID of the segment
+var segmentID = 789; // Number | numeric ID of the segment
 
 
-apiInstance.findConstraints(flagID, segmentID, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.findConstraints(flagID, segmentID, callback);
 ```
 
 ### Parameters
@@ -162,26 +165,27 @@ No authorization required
 
 ### Example
 ```javascript
-import Flagr from 'flagr';
+var Flagr = require('flagr');
 
-let apiInstance = new Flagr.ConstraintApi();
+var apiInstance = new Flagr.ConstraintApi();
 
-let flagID = 789; // Number | numeric ID of the flag
+var flagID = 789; // Number | numeric ID of the flag
 
-let segmentID = 789; // Number | numeric ID of the segment
+var segmentID = 789; // Number | numeric ID of the segment
 
-let constraintID = 789; // Number | numeric ID of the constraint
+var constraintID = 789; // Number | numeric ID of the constraint
 
-let body = new Flagr.CreateConstraintRequest(); // CreateConstraintRequest | create a constraint
+var body = new Flagr.CreateConstraintRequest(); // CreateConstraintRequest | create a constraint
 
 
-apiInstance.putConstraint(flagID, segmentID, constraintID, body, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.putConstraint(flagID, segmentID, constraintID, body, callback);
 ```
 
 ### Parameters

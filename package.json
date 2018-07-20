@@ -1,26 +1,21 @@
 {
   "name": "flagr",
-  "version": "1.0.0",
+  "version": "1.0.8",
   "description": "Flagr_is_a_feature_flagging_AB_testing_and_dynamic_configuration_microservice",
   "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --recursive"
+    "test": "./node_modules/mocha/bin/mocha --recursive"
   },
   "browser": {
     "fs": false
   },
   "dependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
     "superagent": "3.5.2"
   },
   "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "expect.js": "~0.3.1",
     "mocha": "~2.3.4",
-    "sinon": "1.17.3"
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
   }
 }

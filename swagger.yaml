@@ -4,7 +4,7 @@ info:
     Flagr is a feature flagging, A/B testing and dynamic configuration
     microservice
   title: Flagr
-  version: 1.0.0
+  version: 1.0.8
 tags:
   - name: flag
     description: Everything about the flag
@@ -18,6 +18,8 @@ tags:
     description: Variants are the possible outcomes of flag evaluation
   - name: evaluation
     description: Evaluation is the process of evaluating a flag given the entity context
+  - name: health
+    description: Check if Flagr is healthy
 x-tagGroups:
   - name: Flag Management
     tags:
@@ -29,6 +31,9 @@ x-tagGroups:
   - name: Flag Evaluation
     tags:
       - evaluation
+  - name: Health Check
+    tags:
+      - health
 consumes:
   - application/json
 produces:
@@ -42,6 +47,31 @@ paths:
       tags:
         - flag
       operationId: findFlags
+      parameters:
+        - in: query
+          name: limit
+          type: integer
+          format: int64
+          description: the numbers of flags to return
+        - in: query
+          name: enabled
+          type: boolean
+          description: return flags having given enabled status
+        - in: query
+          name: description
+          type: string
+          description: return flags exactly matching given description
+        - in: query
+          name: description_like
+          type: string
+          description: return flags partially matching given description
+        - in: query
+          name: offset
+          type: integer
+          format: int64
+          description: >-
+            return flags given the offset, it should usually set together with
+            limit
       responses:
         '200':
           description: list all the flags
@@ -693,6 +723,17 @@ paths:
           description: generic error response
           schema:
             $ref: '#/definitions/error'
+  /health:
+    get:
+      tags:
+        - health
+      responses:
+        '200':
+          description: Flagr is healthy
+        default:
+          description: generic error response
+          schema:
+            $ref: '#/definitions/error'
 definitions:
   flag:
     type: object
@@ -764,7 +805,6 @@ definitions:
         type: integer
         format: int64
         minimum: 1
-        readOnly: true
       updatedBy:
         type: string
       flag:
@@ -969,13 +1009,14 @@ definitions:
   evalContext:
     type: object
     required:
-      - entityID
       - entityType
       - flagID
     properties:
       entityID:
         type: string
-        minLength: 1
+        description: >-
+          entityID is used to deterministically at random to evaluate the flag
+          result. If it's empty, flagr will randomly generate one.
       entityType:
         type: string
         minLength: 1
@@ -1046,12 +1087,10 @@ definitions:
   evaluationEntity:
     type: object
     required:
-      - entityID
       - entityType
     properties:
       entityID:
         type: string
-        minLength: 1
       entityType:
         type: string
         minLength: 1
