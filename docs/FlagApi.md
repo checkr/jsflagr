@@ -118,6 +118,7 @@ var opts = {
   'enabled': true, // Boolean | return flags having given enabled status
   'description': "description_example", // String | return flags exactly matching given description
   'descriptionLike': "descriptionLike_example", // String | return flags partially matching given description
+  'key': "key_example", // String | return flags matching given key
   'offset': 789 // Number | return flags given the offset, it should usually set together with limit
 };
 
@@ -139,6 +140,7 @@ Name | Type | Description  | Notes
  **enabled** | **Boolean**| return flags having given enabled status | [optional] 
  **description** | **String**| return flags exactly matching given description | [optional] 
  **descriptionLike** | **String**| return flags partially matching given description | [optional] 
+ **key** | **String**| return flags matching given key | [optional] 
  **offset** | **Number**| return flags given the offset, it should usually set together with limit | [optional] 
 
 ### Return type

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **entityType** | **String** |  | 
 **entityContext** | **Object** |  | [optional] 
 **enableDebug** | **Boolean** |  | [optional] 
-**flagID** | **Number** |  | 
+**flagID** | **Number** | flagID | [optional] 
+**flagKey** | **String** | flagKey. flagID or flagKey will resolve to the same flag. Either works. | [optional] 
 
 

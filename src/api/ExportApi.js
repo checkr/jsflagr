@@ -25,20 +25,20 @@
     if (!root.Flagr) {
       root.Flagr = {};
     }
-    root.Flagr.HealthApi = factory(root.Flagr.ApiClient, root.Flagr.Error);
+    root.Flagr.ExportApi = factory(root.Flagr.ApiClient, root.Flagr.Error);
   }
 }(this, function(ApiClient, Error) {
   'use strict';
 
   /**
-   * Health service.
-   * @module api/HealthApi
+   * Export service.
+   * @module api/ExportApi
    * @version 1.0.10
    */
 
   /**
-   * Constructs a new HealthApi. 
-   * @alias module:api/HealthApi
+   * Constructs a new ExportApi. 
+   * @alias module:api/ExportApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,18 +48,19 @@
 
 
     /**
-     * Callback function to receive the result of the getHealth operation.
-     * @callback module:api/HealthApi~getHealthCallback
+     * Callback function to receive the result of the getExportSQLite operation.
+     * @callback module:api/ExportApi~getExportSQLiteCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Check if Flagr is healthy
-     * @param {module:api/HealthApi~getHealthCallback} callback The callback function, accepting three arguments: error, data, response
+     * Export sqlite3 format of the db dump, which is converted from the main database.
+     * @param {module:api/ExportApi~getExportSQLiteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link File}
      */
-    this.getHealth = function(callback) {
+    this.getExportSQLite = function(callback) {
       var postBody = null;
 
 
@@ -76,11 +77,11 @@
 
       var authNames = [];
       var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
+      var accepts = ['application/octet-stream'];
+      var returnType = File;
 
       return this.apiClient.callApi(
-        '/health', 'GET',
+        '/export/sqlite', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
