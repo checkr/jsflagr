@@ -1,34 +1,34 @@
-# Flagr.HealthApi
+# Flagr.ExportApi
 
 All URIs are relative to *http://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getHealth**](HealthApi.md#getHealth) | **GET** /health | 
+[**getExportSQLite**](ExportApi.md#getExportSQLite) | **GET** /export/sqlite | 
 
 
-<a name="getHealth"></a>
-# **getHealth**
-> getHealth()
+<a name="getExportSQLite"></a>
+# **getExportSQLite**
+> File getExportSQLite()
 
 
 
-Check if Flagr is healthy
+Export sqlite3 format of the db dump, which is converted from the main database.
 
 ### Example
 ```javascript
 var Flagr = require('flagr');
 
-var apiInstance = new Flagr.HealthApi();
+var apiInstance = new Flagr.ExportApi();
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getHealth(callback);
+apiInstance.getExportSQLite(callback);
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+**File**
 
 ### Authorization
 
@@ -45,5 +45,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: application/octet-stream
 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
+**key** | **String** | unique key representation of the flag | [optional] 
 **description** | **String** |  | 
 **enabled** | **Boolean** |  | 
 **segments** | [**[Segment]**](Segment.md) |  | [optional] 
