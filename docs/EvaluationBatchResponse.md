@@ -1,4 +1,4 @@
-# Flagr.EvaluationBatchResponse
+# Jsflagr.EvaluationBatchResponse
 
 ## Properties
 Name | Type | Description | Notes

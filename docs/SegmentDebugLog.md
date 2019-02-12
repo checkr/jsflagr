@@ -1,4 +1,4 @@
-# Flagr.SegmentDebugLog
+# Jsflagr.SegmentDebugLog
 
 ## Properties
 Name | Type | Description | Notes

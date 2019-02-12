@@ -1,10 +1,10 @@
 swagger: '2.0'
 info:
-  description: >-
+  description: >
     Flagr is a feature flagging, A/B testing and dynamic configuration
-    microservice
+    microservice. The base path for all the APIs is "/api/v1".
   title: Flagr
-  version: 1.0.10
+  version: 1.0.13
 tags:
   - name: flag
     description: Everything about the flag
@@ -79,6 +79,10 @@ paths:
           description: >-
             return flags given the offset, it should usually set together with
             limit
+        - in: query
+          name: preload
+          type: boolean
+          description: return flags with preloaded segments and variants
       responses:
         '200':
           description: list all the flags
@@ -132,6 +136,25 @@ paths:
           description: generic error response
           schema:
             $ref: '#/definitions/error'
+    delete:
+      tags:
+        - flag
+      operationId: deleteFlag
+      parameters:
+        - in: path
+          name: flagID
+          description: numeric ID of the flag
+          required: true
+          type: integer
+          format: int64
+          minimum: 1
+      responses:
+        '200':
+          description: OK deleted
+        default:
+          description: generic error response
+          schema:
+            $ref: '#/definitions/error'
     put:
       tags:
         - flag
@@ -155,25 +178,6 @@ paths:
           description: returns the flag
           schema:
             $ref: '#/definitions/flag'
-        default:
-          description: generic error response
-          schema:
-            $ref: '#/definitions/error'
-    delete:
-      tags:
-        - flag
-      operationId: deleteFlag
-      parameters:
-        - in: path
-          name: flagID
-          description: numeric ID of the flag
-          required: true
-          type: integer
-          format: int64
-          minimum: 1
-      responses:
-        '200':
-          description: OK deleted
         default:
           description: generic error response
           schema:
@@ -688,6 +692,23 @@ paths:
           description: generic error response
           schema:
             $ref: '#/definitions/error'
+  /flags/entity_types:
+    get:
+      tags:
+        - flag
+      operationId: getFlagEntityTypes
+      responses:
+        '200':
+          description: returns all the FlagEntityTypes
+          schema:
+            type: array
+            items:
+              type: string
+              minLength: 1
+        default:
+          description: generic error response
+          schema:
+            $ref: '#/definitions/error'
   /evaluation:
     post:
       tags:
@@ -797,6 +818,18 @@ definitions:
           enabled data records will get data logging in the metrics pipeline,
           for example, kafka.
         type: boolean
+      entityType:
+        description: >-
+          it will override the entityType in the evaluation logs if it's not
+          empty
+        type: string
+      createdBy:
+        type: string
+      updatedBy:
+        type: string
+      updatedAt:
+        type: string
+        format: date-time
   createFlagRequest:
     type: object
     required:
@@ -810,17 +843,23 @@ definitions:
         type: string
   putFlagRequest:
     type: object
-    required:
-      - description
     properties:
       description:
         type: string
         minLength: 1
+        x-nullable: true
       dataRecordsEnabled:
         type: boolean
         description: >-
           enabled data records will get data logging in the metrics pipeline,
           for example, kafka.
+        x-nullable: true
+      entityType:
+        description: it will overwrite entityType into evaluation logs if it's not empty
+        type: string
+        x-nullable: true
+      enabled:
+        type: boolean
         x-nullable: true
       key:
         type: string
@@ -951,7 +990,6 @@ definitions:
     type: object
     required:
       - key
-      - attachment
     properties:
       key:
         type: string
@@ -1025,9 +1063,6 @@ definitions:
         format: int64
         minimum: 0
         maximum: 100
-      bitmap:
-        type: string
-        minLength: 1
       variantKey:
         type: string
         minLength: 1
@@ -1046,8 +1081,6 @@ definitions:
           $ref: '#/definitions/distribution'
   evalContext:
     type: object
-    required:
-      - entityType
     properties:
       entityID:
         type: string
@@ -1056,7 +1089,6 @@ definitions:
           result. If it's empty, flagr will randomly generate one.
       entityType:
         type: string
-        minLength: 1
       entityContext:
         type: object
       enableDebug:
@@ -1132,14 +1164,11 @@ definitions:
         type: string
   evaluationEntity:
     type: object
-    required:
-      - entityType
     properties:
       entityID:
         type: string
       entityType:
         type: string
-        minLength: 1
       entityContext:
         type: object
   evaluationBatchRequest:

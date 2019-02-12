@@ -1,4 +1,4 @@
-# Flagr.PutSegmentRequest
+# Jsflagr.PutSegmentRequest
 
 ## Properties
 Name | Type | Description | Notes

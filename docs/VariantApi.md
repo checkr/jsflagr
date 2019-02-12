@@ -1,4 +1,4 @@
-# Flagr.VariantApi
+# Jsflagr.VariantApi
 
 All URIs are relative to *http://localhost/api/v1*
 
@@ -18,13 +18,13 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.VariantApi();
+var apiInstance = new Jsflagr.VariantApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
-var body = new Flagr.CreateVariantRequest(); // CreateVariantRequest | create a variant
+var body = new Jsflagr.CreateVariantRequest(); // CreateVariantRequest | create a variant
 
 
 var callback = function(error, data, response) {
@@ -65,9 +65,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.VariantApi();
+var apiInstance = new Jsflagr.VariantApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
@@ -112,9 +112,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.VariantApi();
+var apiInstance = new Jsflagr.VariantApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
@@ -156,15 +156,15 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.VariantApi();
+var apiInstance = new Jsflagr.VariantApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
 var variantID = 789; // Number | numeric ID of the variant
 
-var body = new Flagr.PutVariantRequest(); // PutVariantRequest | update a variant
+var body = new Jsflagr.PutVariantRequest(); // PutVariantRequest | update a variant
 
 
 var callback = function(error, data, response) {

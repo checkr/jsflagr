@@ -1,4 +1,4 @@
-# Flagr.EvalDebugLog
+# Jsflagr.EvalDebugLog
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Flagr.SegmentApi
+# Jsflagr.SegmentApi
 
 All URIs are relative to *http://localhost/api/v1*
 
@@ -19,13 +19,13 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.SegmentApi();
+var apiInstance = new Jsflagr.SegmentApi();
 
 var flagID = 789; // Number | numeric ID of the flag to get
 
-var body = new Flagr.CreateSegmentRequest(); // CreateSegmentRequest | create a segment under a flag
+var body = new Jsflagr.CreateSegmentRequest(); // CreateSegmentRequest | create a segment under a flag
 
 
 var callback = function(error, data, response) {
@@ -66,9 +66,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.SegmentApi();
+var apiInstance = new Jsflagr.SegmentApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
@@ -113,9 +113,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.SegmentApi();
+var apiInstance = new Jsflagr.SegmentApi();
 
 var flagID = 789; // Number | numeric ID of the flag to get
 
@@ -157,15 +157,15 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.SegmentApi();
+var apiInstance = new Jsflagr.SegmentApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
 var segmentID = 789; // Number | numeric ID of the segment
 
-var body = new Flagr.PutSegmentRequest(); // PutSegmentRequest | update a segment
+var body = new Jsflagr.PutSegmentRequest(); // PutSegmentRequest | update a segment
 
 
 var callback = function(error, data, response) {
@@ -207,13 +207,13 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.SegmentApi();
+var apiInstance = new Jsflagr.SegmentApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
-var body = new Flagr.PutSegmentReorderRequest(); // PutSegmentReorderRequest | reorder segments
+var body = new Jsflagr.PutSegmentReorderRequest(); // PutSegmentReorderRequest | reorder segments
 
 
 var callback = function(error, data, response) {

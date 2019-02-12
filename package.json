@@ -1,7 +1,7 @@
 {
-  "name": "flagr",
-  "version": "1.0.10",
-  "description": "Flagr_is_a_feature_flagging_AB_testing_and_dynamic_configuration_microservice",
+  "name": "jsflagr",
+  "version": "1.0.13",
+  "description": "jsflagr is a Javascript client SDK for Flagr.",
   "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "fs": false
   },
   "dependencies": {
-    "superagent": "~3.7.0"
+    "superagent": "3.5.2"
   },
   "devDependencies": {
     "mocha": "~2.3.4",

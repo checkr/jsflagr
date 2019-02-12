@@ -1,4 +1,4 @@
-# Flagr.ExportApi
+# Jsflagr.ExportApi
 
 All URIs are relative to *http://localhost/api/v1*
 
@@ -17,9 +17,9 @@ Export sqlite3 format of the db dump, which is converted from the main database.
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.ExportApi();
+var apiInstance = new Jsflagr.ExportApi();
 
 var callback = function(error, data, response) {
   if (error) {

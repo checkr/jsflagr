@@ -1,4 +1,4 @@
-# Flagr.ConstraintApi
+# Jsflagr.ConstraintApi
 
 All URIs are relative to *http://localhost/api/v1*
 
@@ -18,15 +18,15 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.ConstraintApi();
+var apiInstance = new Jsflagr.ConstraintApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
 var segmentID = 789; // Number | numeric ID of the segment
 
-var body = new Flagr.CreateConstraintRequest(); // CreateConstraintRequest | create a constraint
+var body = new Jsflagr.CreateConstraintRequest(); // CreateConstraintRequest | create a constraint
 
 
 var callback = function(error, data, response) {
@@ -68,9 +68,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.ConstraintApi();
+var apiInstance = new Jsflagr.ConstraintApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
@@ -118,9 +118,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.ConstraintApi();
+var apiInstance = new Jsflagr.ConstraintApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
@@ -165,9 +165,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.ConstraintApi();
+var apiInstance = new Jsflagr.ConstraintApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
@@ -175,7 +175,7 @@ var segmentID = 789; // Number | numeric ID of the segment
 
 var constraintID = 789; // Number | numeric ID of the constraint
 
-var body = new Flagr.CreateConstraintRequest(); // CreateConstraintRequest | create a constraint
+var body = new Jsflagr.CreateConstraintRequest(); // CreateConstraintRequest | create a constraint
 
 
 var callback = function(error, data, response) {

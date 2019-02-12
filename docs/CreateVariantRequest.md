@@ -1,4 +1,4 @@
-# Flagr.CreateVariantRequest
+# Jsflagr.CreateVariantRequest
 
 ## Properties
 Name | Type | Description | Notes

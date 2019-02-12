@@ -1,4 +1,4 @@
-# Flagr.Segment
+# Jsflagr.Segment
 
 ## Properties
 Name | Type | Description | Notes

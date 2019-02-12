@@ -1,4 +1,4 @@
-# Flagr.Variant
+# Jsflagr.Variant
 
 ## Properties
 Name | Type | Description | Notes
