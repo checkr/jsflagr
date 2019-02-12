@@ -1,4 +1,4 @@
-# Flagr.EvaluationBatchRequest
+# Jsflagr.EvaluationBatchRequest
 
 ## Properties
 Name | Type | Description | Notes

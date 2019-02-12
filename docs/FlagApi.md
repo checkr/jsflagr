@@ -1,4 +1,4 @@
-# Flagr.FlagApi
+# Jsflagr.FlagApi
 
 All URIs are relative to *http://localhost/api/v1*
 
@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**deleteFlag**](FlagApi.md#deleteFlag) | **DELETE** /flags/{flagID} | 
 [**findFlags**](FlagApi.md#findFlags) | **GET** /flags | 
 [**getFlag**](FlagApi.md#getFlag) | **GET** /flags/{flagID} | 
+[**getFlagEntityTypes**](FlagApi.md#getFlagEntityTypes) | **GET** /flags/entity_types | 
 [**getFlagSnapshots**](FlagApi.md#getFlagSnapshots) | **GET** /flags/{flagID}/snapshots | 
 [**putFlag**](FlagApi.md#putFlag) | **PUT** /flags/{flagID} | 
 [**setFlagEnabled**](FlagApi.md#setFlagEnabled) | **PUT** /flags/{flagID}/enabled | 
@@ -21,11 +22,11 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.FlagApi();
+var apiInstance = new Jsflagr.FlagApi();
 
-var body = new Flagr.CreateFlagRequest(); // CreateFlagRequest | create a flag
+var body = new Jsflagr.CreateFlagRequest(); // CreateFlagRequest | create a flag
 
 
 var callback = function(error, data, response) {
@@ -65,9 +66,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.FlagApi();
+var apiInstance = new Jsflagr.FlagApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
@@ -109,9 +110,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.FlagApi();
+var apiInstance = new Jsflagr.FlagApi();
 
 var opts = { 
   'limit': 789, // Number | the numbers of flags to return
@@ -119,7 +120,8 @@ var opts = {
   'description': "description_example", // String | return flags exactly matching given description
   'descriptionLike': "descriptionLike_example", // String | return flags partially matching given description
   'key': "key_example", // String | return flags matching given key
-  'offset': 789 // Number | return flags given the offset, it should usually set together with limit
+  'offset': 789, // Number | return flags given the offset, it should usually set together with limit
+  'preload': true // Boolean | return flags with preloaded segments and variants
 };
 
 var callback = function(error, data, response) {
@@ -142,6 +144,7 @@ Name | Type | Description  | Notes
  **descriptionLike** | **String**| return flags partially matching given description | [optional] 
  **key** | **String**| return flags matching given key | [optional] 
  **offset** | **Number**| return flags given the offset, it should usually set together with limit | [optional] 
+ **preload** | **Boolean**| return flags with preloaded segments and variants | [optional] 
 
 ### Return type
 
@@ -164,9 +167,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.FlagApi();
+var apiInstance = new Jsflagr.FlagApi();
 
 var flagID = 789; // Number | numeric ID of the flag to get
 
@@ -200,6 +203,44 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="getFlagEntityTypes"></a>
+# **getFlagEntityTypes**
+> [&#39;String&#39;] getFlagEntityTypes()
+
+
+
+### Example
+```javascript
+var Jsflagr = require('jsflagr');
+
+var apiInstance = new Jsflagr.FlagApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getFlagEntityTypes(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**[&#39;String&#39;]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="getFlagSnapshots"></a>
 # **getFlagSnapshots**
 > [FlagSnapshot] getFlagSnapshots(flagID)
@@ -208,9 +249,9 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.FlagApi();
+var apiInstance = new Jsflagr.FlagApi();
 
 var flagID = 789; // Number | numeric ID of the flag to get
 
@@ -252,13 +293,13 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.FlagApi();
+var apiInstance = new Jsflagr.FlagApi();
 
 var flagID = 789; // Number | numeric ID of the flag to get
 
-var body = new Flagr.PutFlagRequest(); // PutFlagRequest | update a flag
+var body = new Jsflagr.PutFlagRequest(); // PutFlagRequest | update a flag
 
 
 var callback = function(error, data, response) {
@@ -299,13 +340,13 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.FlagApi();
+var apiInstance = new Jsflagr.FlagApi();
 
 var flagID = 789; // Number | numeric ID of the flag to get
 
-var body = new Flagr.SetFlagEnabledRequest(); // SetFlagEnabledRequest | set flag enabled state
+var body = new Jsflagr.SetFlagEnabledRequest(); // SetFlagEnabledRequest | set flag enabled state
 
 
 var callback = function(error, data, response) {

@@ -1,4 +1,4 @@
-# Flagr.PutDistributionsRequest
+# Jsflagr.PutDistributionsRequest
 
 ## Properties
 Name | Type | Description | Notes

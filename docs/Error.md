@@ -1,4 +1,4 @@
-# Flagr.Error
+# Jsflagr.Error
 
 ## Properties
 Name | Type | Description | Notes

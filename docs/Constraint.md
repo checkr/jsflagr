@@ -1,4 +1,4 @@
-# Flagr.Constraint
+# Jsflagr.Constraint
 
 ## Properties
 Name | Type | Description | Notes

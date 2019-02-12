@@ -1,4 +1,4 @@
-# Flagr.EvalResult
+# Jsflagr.EvalResult
 
 ## Properties
 Name | Type | Description | Notes

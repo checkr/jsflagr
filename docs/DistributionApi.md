@@ -1,4 +1,4 @@
-# Flagr.DistributionApi
+# Jsflagr.DistributionApi
 
 All URIs are relative to *http://localhost/api/v1*
 
@@ -16,9 +16,9 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.DistributionApi();
+var apiInstance = new Jsflagr.DistributionApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
@@ -65,15 +65,15 @@ replace the distribution with the new setting
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.DistributionApi();
+var apiInstance = new Jsflagr.DistributionApi();
 
 var flagID = 789; // Number | numeric ID of the flag
 
 var segmentID = 789; // Number | numeric ID of the segment
 
-var body = new Flagr.PutDistributionsRequest(); // PutDistributionsRequest | array of distributions
+var body = new Jsflagr.PutDistributionsRequest(); // PutDistributionsRequest | array of distributions
 
 
 var callback = function(error, data, response) {

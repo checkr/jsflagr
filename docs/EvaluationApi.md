@@ -1,4 +1,4 @@
-# Flagr.EvaluationApi
+# Jsflagr.EvaluationApi
 
 All URIs are relative to *http://localhost/api/v1*
 
@@ -16,11 +16,11 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.EvaluationApi();
+var apiInstance = new Jsflagr.EvaluationApi();
 
-var body = new Flagr.EvalContext(); // EvalContext | evalution context
+var body = new Jsflagr.EvalContext(); // EvalContext | evalution context
 
 
 var callback = function(error, data, response) {
@@ -60,11 +60,11 @@ No authorization required
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.EvaluationApi();
+var apiInstance = new Jsflagr.EvaluationApi();
 
-var body = new Flagr.EvaluationBatchRequest(); // EvaluationBatchRequest | evalution batch request
+var body = new Jsflagr.EvaluationBatchRequest(); // EvaluationBatchRequest | evalution batch request
 
 
 var callback = function(error, data, response) {

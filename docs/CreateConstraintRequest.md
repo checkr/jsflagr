@@ -1,4 +1,4 @@
-# Flagr.CreateConstraintRequest
+# Jsflagr.CreateConstraintRequest
 
 ## Properties
 Name | Type | Description | Notes

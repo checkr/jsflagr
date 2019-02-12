@@ -1,4 +1,4 @@
-# Flagr.HealthApi
+# Jsflagr.HealthApi
 
 All URIs are relative to *http://localhost/api/v1*
 
@@ -17,9 +17,9 @@ Check if Flagr is healthy
 
 ### Example
 ```javascript
-var Flagr = require('flagr');
+var Jsflagr = require('jsflagr');
 
-var apiInstance = new Flagr.HealthApi();
+var apiInstance = new Jsflagr.HealthApi();
 
 var callback = function(error, data, response) {
   if (error) {

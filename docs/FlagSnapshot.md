@@ -1,4 +1,4 @@
-# Flagr.FlagSnapshot
+# Jsflagr.FlagSnapshot
 
 ## Properties
 Name | Type | Description | Notes

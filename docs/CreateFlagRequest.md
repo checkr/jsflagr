@@ -1,4 +1,4 @@
-# Flagr.CreateFlagRequest
+# Jsflagr.CreateFlagRequest
 
 ## Properties
 Name | Type | Description | Notes

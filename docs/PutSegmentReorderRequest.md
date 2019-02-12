@@ -1,4 +1,4 @@
-# Flagr.PutSegmentReorderRequest
+# Jsflagr.PutSegmentReorderRequest
 
 ## Properties
 Name | Type | Description | Notes
