@@ -1,6 +1,6 @@
 {
   "name": "jsflagr",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "description": "jsflagr is a Javascript client SDK for Flagr.",
   "license": "Apache 2.0",
   "main": "src/index.js",
