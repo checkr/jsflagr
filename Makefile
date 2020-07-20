@@ -17,3 +17,4 @@ gen:
 		-D licenseName="Apache 2.0" \
 		-D projectDescription="jsflagr is a Javascript client SDK for Flagr." \
 		-o /local/
+	npm i && npm audit fix --force
