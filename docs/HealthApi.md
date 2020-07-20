@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getHealth"></a>
 # **getHealth**
-> getHealth()
+> Health getHealth()
 
 
 
@@ -25,7 +25,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.getHealth(callback);
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+[**Health**](Health.md)
 
 ### Authorization
 
