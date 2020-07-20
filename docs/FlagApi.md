@@ -118,6 +118,7 @@ var opts = {
   'limit': 789, // Number | the numbers of flags to return
   'enabled': true, // Boolean | return flags having given enabled status
   'description': "description_example", // String | return flags exactly matching given description
+  'tags': "tags_example", // String | return flags with the given tags (comma separated)
   'descriptionLike': "descriptionLike_example", // String | return flags partially matching given description
   'key': "key_example", // String | return flags matching given key
   'offset': 789, // Number | return flags given the offset, it should usually set together with limit
@@ -141,6 +142,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**| the numbers of flags to return | [optional] 
  **enabled** | **Boolean**| return flags having given enabled status | [optional] 
  **description** | **String**| return flags exactly matching given description | [optional] 
+ **tags** | **String**| return flags with the given tags (comma separated) | [optional] 
  **descriptionLike** | **String**| return flags partially matching given description | [optional] 
  **key** | **String**| return flags matching given key | [optional] 
  **offset** | **Number**| return flags given the offset, it should usually set together with limit | [optional] 
@@ -205,7 +207,7 @@ No authorization required
 
 <a name="getFlagEntityTypes"></a>
 # **getFlagEntityTypes**
-> [&#39;String&#39;] getFlagEntityTypes()
+> ['String'] getFlagEntityTypes()
 
 
 
@@ -230,7 +232,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**[&#39;String&#39;]**
+**['String']**
 
 ### Authorization
 

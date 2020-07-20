@@ -1,21 +1,22 @@
 {
   "name": "jsflagr",
-  "version": "1.1.0",
+  "version": "1.1.10",
   "description": "jsflagr is a Javascript client SDK for Flagr.",
   "license": "Apache 2.0",
   "main": "src/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive"
+    "test": "mocha --recursive"
   },
   "browser": {
     "fs": false
   },
   "dependencies": {
-    "superagent": "3.7.0"
+    "superagent": "3.7.0",
+    "querystring": "0.2.0"
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
-    "mocha": "^5.2.0",
+    "mocha": "^8.0.1",
     "sinon": "1.17.3"
   }
 }
